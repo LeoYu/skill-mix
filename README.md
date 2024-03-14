@@ -1,4 +1,22 @@
-# skill-mix-eval
+# SKILL-MIX: a Flexible and Expandable Family of Evaluations for AI models  
+
+## What is this repo?
+
+- This repo is a reference implementation of SKILL-MIX evaluation, as described in this paper [Skill-Mix: a Flexible and Expandable Family of Evaluations for AI models](https://arxiv.org/abs/2310.17567). SKILL-MIX evaluates the capability of Large Language Models (LLMs) to combine language skills. It contains a set of 101 language skills (e.g., “use of metaphor”) and a set of 100 topics (e.g., “dueling”, “gardening”). Every time it **randomly** picks **$k$ language skills** from the skill set and **one topic** from the topic set, and asks LLMs to generate **a short piece of text in the context of the selected topic and illustrate all $k$ selected skills**. Here is an example:
+  
+<p align="center">
+ <img width="500" alt="image" src="https://github.com/LeoYu/skill-mix/assets/1962796/aff46d3d-e18a-4c4d-933a-532297fb9be0">
+ </p>
+  
+  The generations by LLMs are then graded by GPT-4 or LLaMA-2 70B chat.
+  Below is the full pipeline of SKILL-MIX 
+   
+<p align="center">
+ <img width="1000" alt="image" src="https://github.com/LeoYu/skill-mix/assets/1962796/f1ae0bb2-63f7-4b3e-ab19-0e6ba4e5e70b">
+ </p>
+ 
+- Since the goal of SKILL-MIX is to test general-purpose text generation capability rather than ability on the particular set of skills and topics, we release only a random subset of 10% of [skills](skills.csv) and [topics](topics.txt) in this repo. 
+- We provide instructions to submit and test your model in the full sets of skills of topics. 
 
 ## usage
 
@@ -80,3 +98,12 @@ add `--filter_explicit_name` to deduct points for explicitely mentioning the nam
 
 add `--filter_skills {skill_to_filter_seperated_by_comma}` to filter out combinations containing some specific skills
 
+## Citation
+```
+@article{yu2023skillmix,
+      title={Skill-Mix: a Flexible and Expandable Family of Evaluations for AI models}, 
+      author={Yu, Dingli and Kaur, Simran and Gupta, Arushi and Brown-Cohen, Jonah and Goyal, Anirudh and Arora, Sanjeev},
+      journal={arXiv preprint arXiv:2310.17567},
+      year={2023}
+}
+```
