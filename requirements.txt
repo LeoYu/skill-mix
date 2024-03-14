@@ -1,0 +1,9 @@
+fastchat
+pandas
+tqdm
+psutil
+torch
+transformers
+accelerate
+inflect
+openai==0.28
