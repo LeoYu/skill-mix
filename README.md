@@ -18,7 +18,7 @@
 - Since the goal of SKILL-MIX is to test general-purpose text generation capability rather than ability on the particular set of skills and topics, we release only a random subset of 10% of [skills](skills.csv) and [topics](topics.txt) in this repo. 
 - We provide instructions to submit and test your model in the full sets of skills of topics. 
 
-## usage
+## Usage
 
 Preparation:
 
@@ -60,7 +60,7 @@ python query_random.py --k ${k} \
     --skills_dict_path ${skill_csv_file} --topics_path ${topic_txt_file}
 ```
 
-Output will be saved to `${root}/k${k}_s${seed}_v${prompt_version}_r${generation_round_idx}/${student_model_name}/record.csv`
+The output will be saved to `${root}/k${k}_s${seed}_v${prompt_version}_r${generation_round_idx}/${student_model_name}/record.csv`
 
 - **Grading**
 
@@ -72,7 +72,7 @@ python grade.py --student_model_name ${student_model_name} \
     --prompt_version ${grading_prompt_version} 
 ```
 
-Output will be saved to `${root}/k${k}_s${seed}_v${prompt_version}_r${generation_round_idx}/${student_model_name}/graded/by_{grader_model_name}_on_text_1_${grading_round_idx}_${grading_prompt_version}/record.csv`.
+The output will be saved to `${root}/k${k}_s${seed}_v${prompt_version}_r${generation_round_idx}/${student_model_name}/graded/by_{grader_model_name}_on_text_1_${grading_round_idx}_${grading_prompt_version}/record.csv`.
     
 For GPT-4, we allow multiple runs of grading in the same time 
 ```
@@ -94,9 +94,9 @@ python aggregate_metrics.py --student_model_name ${student_model_name} --grader_
     --generation_prompt_version ${generation_prompt_version} --grading_prompt_version ${grading_prompt_version} --seed ${seed}
 ```
     
-add `--filter_explicit_name` to deduct points for explicitely mentioning the name of skills
+Add `--filter_explicit_name` to deduct points for explicitely mentioning the name of skills
 
-add `--filter_skills {skill_to_filter_seperated_by_comma}` to filter out combinations containing some specific skills
+Add `--filter_skills {skill_to_filter_seperated_by_comma}` to filter out combinations containing some specific skills
 
 ### Contributing a Model
 
