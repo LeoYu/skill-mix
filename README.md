@@ -17,7 +17,9 @@ This repo is a reference implementation of SKILL-MIX evaluation, as described in
  
 Since the goal of SKILL-MIX is to test general-purpose text generation capability rather than ability on the particular set of skills and topics, we release only a random subset of 10% of [skills](skills.csv) and [topics](topics.txt) in this repo. 
 
-We provide instructions to submit and test your model in the full sets of skills of topics. 
+We provide instructions on how to
+- test your model on the publically released skills + topics
+- submit your model to the [SKILL-MIX Leaderboard](https://skill-mix.github.io/), which reflects performance on the full sets of skills and topics. 
 
 <details open>
   <summary><b>Table of Contents</b></summary>
