@@ -22,7 +22,7 @@
 
 Preparation:
 
-- set OPENAI_API_KEY in your environment
+- set `OPENAI_API_KEY` in your environment
 
 Parameters:
 
