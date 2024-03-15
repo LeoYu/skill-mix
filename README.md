@@ -18,6 +18,14 @@
 - Since the goal of SKILL-MIX is to test general-purpose text generation capability rather than ability on the particular set of skills and topics, we release only a random subset of 10% of [skills](skills.csv) and [topics](topics.txt) in this repo. 
 - We provide instructions to submit and test your model in the full sets of skills of topics. 
 
+<details open>
+  <summary><b>Table of Contents</b></summary>
+
+1. [Usage](#usage)
+2. [Contributing a model](#contributing-a-model)
+
+</details>
+
 ## Usage
 
 Preparation:
