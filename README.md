@@ -57,7 +57,7 @@ Parameters:
 
 Commands:
 
-- **Query random combination**
+#### Query random combination
 ```
 python query_random.py --k ${k} \
     --generation_round_idx ${generation_round_idx} \
@@ -70,7 +70,7 @@ python query_random.py --k ${k} \
 
 The output will be saved to `${root}/k${k}_s${seed}_v${prompt_version}_r${generation_round_idx}/${student_model_name}/record.csv`
 
-- **Grading**
+#### Grading
 
 ```
 python grade.py --student_model_name ${student_model_name} \
@@ -93,7 +93,7 @@ python grade.py --student_model_name ${student_model_name} \
 
 For grading prompt version `gpt`, you can add `--max-new-tokens $((120+20*k))` for just obtain the scores.
 
-- **Aggregate Metrics**
+#### Aggregate Metrics
 
 ```
 python aggregate_metrics.py --student_model_name ${student_model_name} --grader_model_name ${grader_model_name} \
