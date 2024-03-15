@@ -98,6 +98,45 @@ add `--filter_explicit_name` to deduct points for explicitely mentioning the nam
 
 add `--filter_skills {skill_to_filter_seperated_by_comma}` to filter out combinations containing some specific skills
 
+### Contributing a Model
+
+Please follow the steps below to add your model to the SKILLMIX leaderboard.
+
+## 1. Download `requirements.txt`
+
+\`\`\`bash
+pip install -r requirements.txt
+\`\`\`
+
+## 2. Add Your Model Configuration to `engine.py`
+
+Please add your model's configuration to `engine.py`, and make sure this is still compatible with `test_pipeline.sh`.
+
+## 3. Update `test_pipeline.sh`
+
+Please update `test_pipeline.sh` with the appropriate arguments for your model.
+We encourage you to experiment with various settings for the arguments in `test_pipeline.sh`. To ensure your model performs well, experiment with various generation prompts in `prompts/generation` (and feel free to add your own). 
+
+## 4. Submit a Pull Request (PR) with Your Changes
+
+Once you are satisfied with your model's performance on the released list of skills and topics, submit a Pull Request to the main project repository with your changes. The PR should include:
+
+- The updated `engine.py` file with your model configuration.
+- Any additional generation prompts in `prompts/generation`
+- An updated version of `test_pipeline.sh`
+
+## 5. Fill Out the Linked Form
+
+After submitting your PR, please fill out [this form](https://forms.gle/MrQNNaFnJBbwMDku7). The form asks for:
+
+- Access to your model weights. Please provide a link or a method for us (e.g., the model card on Huggingface) to access the model weights securely.
+- An `OpenAI` key (for evaluation). We encourage you to create a single project key, so that you may cancel it after we are done with evaluation.
+
+---
+
+After completing these steps, we will review your request and update you once your model has been added to the leaderboard. Thank you for contributing!
+
+
 ## Citation
 ```
 @article{yu2023skillmix,
