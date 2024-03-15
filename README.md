@@ -22,9 +22,9 @@
   <summary><b>Table of Contents</b></summary>
 
 1. [Usage](#usage)
-  - [Query random combinations](#query-random-combination)
-  - [Grading](#grading)
-  - [Aggregate metrics](#aggregate-metrics)
+    - [Query random combinations](#query-random-combination)
+    - [Grading](#grading)
+    - [Aggregate metrics](#aggregate-metrics)
 2. [Contributing a model](#contributing-a-model)
 
 </details>
