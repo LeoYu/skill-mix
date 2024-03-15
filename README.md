@@ -104,9 +104,9 @@ Please follow the steps below to add your model to the SKILLMIX leaderboard.
 
 ## 1. Download `requirements.txt`
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
 ## 2. Add Your Model Configuration to `engine.py`
 
